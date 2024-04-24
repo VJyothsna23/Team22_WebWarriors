@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cucumber Parallel Suite" verbose="1" parallel="tests" thread-count="5">
+    <test name="DsAlgo Tests">
+        <classes>
+            <class name="src\test\java\lms.Runner\TestRunner.java"/>
+        </classes>
+    </test>
+</suite>

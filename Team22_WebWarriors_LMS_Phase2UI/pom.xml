@@ -1,0 +1,220 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Team22_WebWarriors_LMS_Phase2UI</groupId>
+  <artifactId>Team22_WebWarriors_LMS_Phase2UI</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cucumber.version>7.15.0</cucumber.version>
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+  
+  <dependencies>
+	  
+   <!-- This dependency provides the Java bindings for Selenium WebDriver. -->
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>4.19.1</version>
+	</dependency>
+   
+   <!-- This dependency includes the core Java implementation for Cucumber. -->
+	<dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+	</dependency>
+	
+	<!-- This integrates Cucumber with TestNG, a testing framework for Java. 
+		It allows you to run Cucumber tests using TestNG. -->
+	<dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>${cucumber.version}</version>
+	</dependency>
+	
+    <!-- This integrates Cucumber with JUnit, another popular testing framework. 
+    	It allows running Cucumber tests as JUnit tests. -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+	</dependency>
+	
+	<!-- This dependency integrates PicoContainer, 
+		a lightweight dependency injection container, with Cucumber. -->
+   <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-picocontainer</artifactId>
+      <version>${cucumber.version}</version>
+	</dependency>
+	
+	<!-- JUnit is a widely-used unit testing framework for Java. 
+		This is required for running JUnit tests, including those used in Cucumber. -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+		
+	<!-- TestNG is another testing framework for Java. 
+		It's used here to support running TestNG-based tests in our project. -->
+		<dependency>
+			<groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.1</version>
+            <scope>test</scope>
+         </dependency>
+	
+	<!-- WebDriverManager simplifies the management of WebDriver binaries (like ChromeDriver, GeckoDriver) 
+		required for Selenium tests. -->
+	<dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.8.0</version>
+	</dependency>
+	
+	<!-- Apache POI is a library for reading and writing Microsoft Office file formats.
+		These can be used in test scenarios where data needs to be read from or written to Excel files. -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.2.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.5</version>
+		</dependency>
+
+	<!-- ExtentReports is a reporting library. 
+		This adapter integrates ExtentReports with Cucumber version 7. -->
+	<dependency>
+   	 	<groupId>tech.grasshopper</groupId>
+    	<artifactId>extentreports-cucumber7-adapter</artifactId>
+    	<version>1.14.0</version>
+	</dependency>
+	
+	<!-- Allure is another reporting tool. 
+		This dependency integrates Allure with Cucumber version 7. -->
+	<dependency>
+   	 	<groupId>io.qameta.allure</groupId>
+    	<artifactId>allure-cucumber7-jvm</artifactId>
+   		<version>2.27.0</version>
+	</dependency>
+
+	<!-- This integrates Allure with TestNG, allowing us to generate Allure reports for TestNG tests. -->
+	<dependency>
+   		<groupId>io.qameta.allure</groupId>
+    	<artifactId>allure-testng</artifactId>
+    	<version>2.27.0</version>
+	</dependency>
+	
+
+
+
+	<!-- Log4j is a widely-used logging framework for Java. 
+		These dependencies provide the Log4j API and its core implementation. -->
+	<dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.23.0</version>
+	</dependency>
+
+	<dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.23.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl -->
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-slf4j2-impl</artifactId>
+		<version>2.23.0</version>
+		<scope>test</scope>
+	</dependency>
+	
+	<!-- Lombok is a library that helps reduce boilerplate code in Java. 
+		It provides annotations to automatically generate getters, setters, constructors, etc. -->
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.32</version>
+		<optional>true</optional>
+	</dependency>
+		
+	<!-- Apache Commons Lang provides helper utilities for the Java programming language. 
+		This is used for general utility functions. -->	
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>2.6</version> <!-- or the latest version -->
+	</dependency>
+		
+	<!-- Jazzy is a Java library for spell checking. 
+		This could be used for text validation or spell-checking within our tests. -->	
+	<dependency>
+		<groupId>net.sf.jazzy</groupId>
+		<artifactId>jazzy</artifactId>
+		<version>0.5.2-rtext-1.4.1-2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-core</artifactId>
+	    <version>2.13.1</version> <!-- Use the latest version -->
+	</dependency>
+	
+	<!-- Failsafe Plugin is specifically designed to run integration tests. 
+				It's commonly used for running tests in parallel. -->	
+		<dependency>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-failsafe-plugin</artifactId>
+	      <version>3.2.5</version>
+	      <type>maven-plugin</type>
+	    </dependency>
+
+  </dependencies>
+  
+  <build>
+	  <plugins>
+		  
+		  <!-- This plugin is used to compile the project's source code. 
+		  		The configuration specifies the Java version compatibility. -->
+		  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+          </plugin>
+		  
+		  <!-- The Surefire Plugin is used for running unit tests. 
+		  		  The configuration specifies which test classes to include, 
+		  			and it enables parallel test execution. -->
+		  <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-surefire-plugin</artifactId>
+			  <version>${maven.surefire.plugin.version}</version>
+			  	<configuration>
+					<includes>**/TestRunner.java</includes>
+        			<parallel>classes</parallel>
+       				<threadCount>4</threadCount>
+       				
+    			</configuration>
+		  </plugin>
+                        
+        </plugins>
+        
+    </build>
+</project>
