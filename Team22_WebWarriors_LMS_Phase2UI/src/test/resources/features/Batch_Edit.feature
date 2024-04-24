@@ -1,6 +1,6 @@
 @LMS @Batch_Edit
 Feature: Testing the Edit Batch window of LMS application
-  
+
   Background: Admin is on Edit Batch Details window
     Given Admin is on Manage Batch page and clicks on Edit Batch button corresponding to a Batch
 
