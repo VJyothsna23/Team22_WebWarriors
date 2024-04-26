@@ -1,31 +1,93 @@
 package lms.PageFactory;
 
-import java.util.List;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import lms.Utils.ConfigReader;
+
 public class User_DeletePage {
-
-	@FindBy(xpath = "//h1[text()='Preparing for the Interviews']") public  WebElement homePageText;
-	@FindBy(xpath = "//button[text()='Get Started']") public  WebElement getStartedButtonHP;
-	@FindBy(linkText = "Data Structures") public  WebElement dsDropDown;
-	@FindBy(xpath = "//a[@class='dropdown-item']") public  List<WebElement> dsDropDownOptions;
-	@FindBy(xpath = "//a[text()=' Register ']") public  WebElement registerLink;
-	@FindBy(xpath = "//a[text()='Sign in']") public  WebElement signInLink;
-	@FindBy(xpath = "//input[@value='Register']") public  WebElement registerButton;
-	@FindBy(xpath = "//*[@class='card-title']") public  List<WebElement> dsModuleTitles;
-	@FindBy(xpath = "//h5[text()='Data Structures-Introduction']/../a[text()='Get Started']") public  WebElement getStartedButton_DSIntroductionModule;
-	@FindBy(xpath = "//div[@class='alert alert-primary']") public  WebElement notLoggedInAlert;
-	@FindBy(linkText = "Register!") public  WebElement pleaseRegisterMessageLink;
-	@FindBy(name = "username") public WebElement username;
-	@FindBy(name = "password") public WebElement password;
-
+	
+	public static WebDriver driver;
+	
+	//Login Page
+		@FindBy(id = "username") public  WebElement userLP;
+		@FindBy(id = "password") public  WebElement passwordLP;
+		@FindBy(id = "login") public  WebElement loginButton;
+	
+	@FindBy(id = "user") public WebElement eleUser;
+	@FindBy(className = "box") public WebElement eleManageUser;
+	
+	@FindBy(xpath = "(//span[@class='p-button-icon pi pi-trash'])[2]")public WebElement eleDeleteUser;
+	@FindBy(xpath = "//span[text()='Confirm']") public WebElement eleConfirm;
+	
+	@FindBy(xpath = "//span[text()='Yes']") public WebElement eleYes;
+	@FindBy(xpath = "//div[@role='alert']") public WebElement eleSuccess;
+	
+	@FindBy(xpath = "//span[text()='No']") public WebElement eleNo;
+	
+	@FindBy(xpath = "(//span[text()='Confirm']//following::div//button)[1]") public WebElement eleCloseIcon;
+	
 	public User_DeletePage(WebDriver driver){
-		
+		this.driver = driver;
         PageFactory.initElements(driver, this);
-
     }
+	
+	public void test() {
+		String url = ConfigReader.readPropertiesFile("HomePageUrl");
+		driver.get(url);
+		userLP.sendKeys(ConfigReader.readPropertiesFile("username"));
+		passwordLP.sendKeys(ConfigReader.readPropertiesFile("password"));
+		loginButton.click();
+	}
+
+	public void clickUser() {
+		eleUser.click();
+	}
+	
+	public String verifyManageUserPage() {
+		String cardTitle = eleManageUser.getText();
+		return cardTitle;
+	}
+	
+	public void clickDelete() {
+		eleDeleteUser.click();
+	}	
+	
+	public String isConfirm() {
+		String eleActualValue = eleConfirm.getText();
+		return eleActualValue;
+	}
+	
+	public void isAlertYes() throws InterruptedException {
+		Thread.sleep(2000);
+        eleYes.click();
+	}
+	
+	public String successAlert() {
+		String text = eleSuccess.getText().replaceAll("\\n", " ").trim();
+		System.out.println(text);
+		return text;
+	}
+	
+	public void isAlertNo() throws InterruptedException {
+		Thread.sleep(2000);
+        eleNo.click();
+        isDisplayed(eleConfirm);
+   	}
+	
+	public boolean isDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+	
+	public void isAlertClosed() {
+		eleCloseIcon.click();
+	}
 	
 }
