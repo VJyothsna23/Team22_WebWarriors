@@ -29,7 +29,7 @@ public class ProgramSort_SD{
 		this.ps = testContext.getPs();
 	}
 	
-	@Given("Admin is on Manage Program page after clicking Program on the navigation bar")
+	@When("Admin is on Manage Program page after clicking Program on the navigation bar")
 	public void admin_is_on_manage_program_page_after_clicking_program_on_the_navigation_bar() {
 		ps.getOnManageProgramPage();
 	}

@@ -30,9 +30,6 @@ public class Program_SortPage {
     }
 	
 	public void getOnManageProgramPage(){
-		String url = ConfigReader.readPropertiesFile("HomePageUrl");
-		driver.get(url);
-		PEP.login();
 		PEP.programButton.click();	
 //		LoggerLoad.info("**************Admin is on the Manage Program Page");
 	}
@@ -70,7 +67,7 @@ public class Program_SortPage {
 	
 	public void clickProgramDescSortDesecending() throws InterruptedException {
 		programDescSortIcon.click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		programDescSortIcon.click();
 	}
 	
@@ -80,7 +77,7 @@ public class Program_SortPage {
 	
 	public void clickProgramStatusSortDesecending() throws InterruptedException {
 		programStatusSortIcon.click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		programStatusSortIcon.click();
 	}
 	
@@ -90,7 +87,7 @@ public class Program_SortPage {
 	
 	public void clickProgramNameSortDesecending() throws InterruptedException {
 		programNameSortIcon.click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		programNameSortIcon.click();
 	}
 	

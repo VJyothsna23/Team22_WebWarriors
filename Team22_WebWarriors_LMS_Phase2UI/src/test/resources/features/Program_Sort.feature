@@ -2,7 +2,8 @@
 Feature: Testing the Sorting(Data Ordering) feature of LMS application
 
   Background: Admin is on Manage Program Page after clicking Program on the navigation bar
-    Given Admin is on Manage Program page after clicking Program on the navigation bar
+  	Given Admin enters the url and logs in to the LMS application
+    When Admin is on Manage Program page after clicking Program on the navigation bar
 
   @PS1
   Scenario: Validates Sort icon for program name column - ascending order
