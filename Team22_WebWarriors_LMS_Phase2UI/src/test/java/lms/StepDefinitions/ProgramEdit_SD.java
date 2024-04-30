@@ -60,7 +60,7 @@ public class ProgramEdit_SD{
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated name in the table for the particular program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_name_in_the_table_for_the_particular_program(String string) {
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_name_in_the_table_for_the_particular_program(String string) throws InterruptedException {
 		assertTrue(commonMethods.validator(pe.getSuccessMessageText(),"Successful Program Updated"));
 		assertTrue(commonMethods.validator(pe.getProgramNameColumnText(),"WebMachine"));
 
@@ -74,7 +74,7 @@ public class ProgramEdit_SD{
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated description in the table for the particular program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_description_in_the_table_for_the_particular_program(String string) {
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_description_in_the_table_for_the_particular_program(String string) throws InterruptedException {
 		assertTrue(commonMethods.validator(pe.getSuccessMessageText(),"Successful Program Updated"));
 		assertTrue(commonMethods.validator(pe.getProgramDescColumnText(),"team22"));
 	}
@@ -87,7 +87,7 @@ public class ProgramEdit_SD{
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated status in the table for the particular program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_status_in_the_table_for_the_particular_program(String string) {
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_status_in_the_table_for_the_particular_program(String string) throws InterruptedException {
 		assertTrue(pe.getSuccessMessageText().contains("Program Updated"));
 		assertTrue(commonMethods.validator(pe.getProgramStatusColumnText(),"Inactive"));
 	}
@@ -132,7 +132,7 @@ public class ProgramEdit_SD{
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated details in the table for the particular program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_details_in_the_table_for_the_particular_program(String string) {
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_details_in_the_table_for_the_particular_program(String string) throws InterruptedException {
 		assertTrue(commonMethods.validator(pe.getSuccessMessageText(),"Successful Program Updated"));
 		assertTrue(commonMethods.validator(pe.getProgramNameColumnText(),Env_Var.programNameEdit.get(0)));
 		assertTrue(commonMethods.validator(pe.getProgramDescColumnText(),"Team22"));

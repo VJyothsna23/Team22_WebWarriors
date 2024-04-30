@@ -95,7 +95,7 @@ public class Program_EditPage {
 		search(ConfigReader.readPropertiesFile("ProgramName"));
 		Thread.sleep(1000);		
 		clickEditProgram();
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		LoggerLoad.info("**************Admin is on the Edit Program Details Window");
 	}
 	
@@ -128,7 +128,7 @@ public class Program_EditPage {
 	}
 	
 	public void editProgramDesc(String value) throws InterruptedException {
-		
+		Thread.sleep(1000);	
 		String wh = driver.getWindowHandle();
 		driver.switchTo().window(wh);
 		programDesc.clear();
@@ -156,7 +156,8 @@ public class Program_EditPage {
 		cancelButton.click();
 	}
 	
-	public String getSuccessMessageText() {
+	public String getSuccessMessageText() throws InterruptedException {
+		Thread.sleep(1000);	
 		String message1 = successMessage.getText();
 		String message2 = programUpdatedMessage.getText();
 		String message = message1+ " " + message2;
@@ -208,7 +209,7 @@ public class Program_EditPage {
 		programDesc.sendKeys("Team22");
 		activeButton.click();
 		saveButton.click();
-	//	Thread.sleep(1000);
+		Thread.sleep(1000);
 	}
 	
 	public void goToNextPage() {
