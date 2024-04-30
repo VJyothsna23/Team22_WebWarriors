@@ -10,7 +10,7 @@ package lms.Runner;
 
 		@CucumberOptions(
 				monochrome = false,  //console output formatting
-				tags = "@LMS", //tags from feature file
+				tags = "@Program_Sort", //tags from feature file
 				features = {"src/test/resources/features"}, //location of feature files
 				glue= {"lms.StepDefinitions","lms.Hooks"}, //location of step definition files
 				plugin = {"pretty", //For the Detailed output and generating reports.
