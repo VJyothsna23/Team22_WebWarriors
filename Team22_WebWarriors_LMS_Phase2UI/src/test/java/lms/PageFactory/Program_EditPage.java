@@ -110,7 +110,7 @@ public class Program_EditPage {
 		String wh = driver.getWindowHandle();
 		driver.switchTo().window(wh);
 		programName.clear();
-		programName.sendKeys("WebMachine");		
+		programName.sendKeys("WebWQaMachine");		
 	}
 	
 	public void editProgramName(String value) throws InterruptedException {

@@ -6,16 +6,23 @@ import java.util.Date;
 public class dynamicGenerator {
 	
 	public static String generateProgramNameForEdit() {
-        String baseProgName = "WebQa";
+        String baseProgName = "WebWQa";
         String timestamp = generateTimestamp();
         String uniqueName = baseProgName + timestamp;
         return uniqueName;
     }
 
     public static String generateProgramNameForDelete() {
-        String baseProgName = "DelQa";
+        String baseProgName = "DelWQa";
         String timestamp = generateTimestamp();
         String uniqueName = baseProgName + timestamp;
+        return uniqueName;
+    }
+    
+    public static String generatebatchNameForAdd() {
+        String baseBatchName = "AddWebQa";
+        String timestamp = generateTimestamp();
+        String uniqueName = baseBatchName + timestamp;
         return uniqueName;
     }
 

@@ -111,12 +111,19 @@ public class Program_DeletePage {
 	public void searchdeletedProgram1() throws InterruptedException {
 		PEP.search(Env_Var.programNameDel.get(0));
 		System.out.println("Program name which is trying to be deleted is: "+ Env_Var.programNameDel.get(0) );
-		Thread.sleep(1000);				
+		Thread.sleep(2000);				
 //		LoggerLoad.info("**************Admin is on the Delete Program confirmation popup");
 	}
 	
 	public void searchdeletedProgram2() throws InterruptedException {
 		PEP.search(Env_Var.programNameDel.get(1));
+		System.out.println("Program name which is trying to be deleted is: "+ Env_Var.programNameDel );
+		Thread.sleep(1000);				
+//		LoggerLoad.info("**************Admin is on the Delete Program confirmation popup");
+	}
+	
+	public void searchdeletedProgram3() throws InterruptedException {
+		PEP.search(Env_Var.programNameDel.get(2));
 		System.out.println("Program name which is trying to be deleted is: "+ Env_Var.programNameDel );
 		Thread.sleep(1000);				
 //		LoggerLoad.info("**************Admin is on the Delete Program confirmation popup");

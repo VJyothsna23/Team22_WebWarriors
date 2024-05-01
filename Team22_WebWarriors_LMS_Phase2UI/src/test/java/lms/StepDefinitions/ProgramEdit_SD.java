@@ -62,7 +62,7 @@ public class ProgramEdit_SD{
 	@Then("Admin gets a message {string} alert and able to see the updated name in the table for the particular program")
 	public void admin_gets_a_message_alert_and_able_to_see_the_updated_name_in_the_table_for_the_particular_program(String string) throws InterruptedException {
 		assertTrue(commonMethods.validator(pe.getSuccessMessageText(),"Successful Program Updated"));
-		assertTrue(commonMethods.validator(pe.getProgramNameColumnText(),"WebMachine"));
+		assertTrue(commonMethods.validator(pe.getProgramNameColumnText(),"WebWQaMachine"));
 
 	}
 

@@ -134,7 +134,6 @@ public class ProgramDelete_SD{
 //	    pd.refreshPage();
 //	    pd.searchdeletedProgram1();
 //	    assertTrue((pd.ShowingZeroText).isDisplayed());
-	    
 	    Env_Var.programNameDel.remove(0);
 	}
 	

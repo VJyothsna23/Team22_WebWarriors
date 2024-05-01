@@ -89,6 +89,19 @@ public class commonMethods {
 		actions.sendKeys(element, input).perform();
 		
 	}
+	
+	public static String getElementTagName(WebElement element) {
+		
+		String tagName = element.getTagName();
+		System.out.println("Element tag name is: "+ tagName);
+		return tagName;	
+	}
 
+	public static String getattribute(WebElement element, String name) {
+		
+		String attributeValue = element.getAttribute(name);
+		System.out.println("Element's" +name+ "atrribute value is: "+ attributeValue);
+		return attributeValue;	
+	}
 
 }
