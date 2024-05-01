@@ -7,7 +7,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
-
 public class ConfigReader {
 	
 	static Properties prop = new Properties();
@@ -41,6 +40,14 @@ public class ConfigReader {
 		
 	}
 	
+//	public static String getApplicationUrl() {
+//		String url = prop.getProperty("HomePageUrl");
+//		System.out.println("URL is " +url);
+//		if (url != null)
+//			return url;
+//		else
+//			throw new RuntimeException("url not available. ");
+//	}
 
 //	public static void main(String[] args) {
 //		String str = readPropertiesFile("getStartedPageUrl");

@@ -21,6 +21,20 @@
 	    <artifactId>selenium-java</artifactId>
 	    <version>4.19.1</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+<dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>5.11.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.asprise.ocr/java-ocr-api -->
+<dependency>
+    <groupId>com.asprise.ocr</groupId>
+    <artifactId>java-ocr-api</artifactId>
+    <version>15.3.0.3</version>
+</dependency>
+
+	
    
    <!-- This dependency includes the core Java implementation for Cucumber. -->
 	<dependency>
@@ -29,7 +43,9 @@
       <version>${cucumber.version}</version>
 	</dependency>
 	
-	<!-- This integrates Cucumber with TestNG, a testing framework for Java. 
+	
+	
+		<!-- This integrates Cucumber with TestNG, a testing framework for Java. 
 		It allows you to run Cucumber tests using TestNG. -->
 	<dependency>
       <groupId>io.cucumber</groupId>
