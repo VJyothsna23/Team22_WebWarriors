@@ -10,17 +10,19 @@ package lms.Runner;
 
 		@CucumberOptions(
 				monochrome = false,  //console output formatting
-				tags = "@HomePage", //tags from feature file
+				 //tags from feature file
 				features = {"src/test/resources/features"}, //location of feature files
-				glue= {"lms.stepDefinitions","lms.hooks"}, //location of step definition files
+				glue= {"lms.StepDefinitions","lms.Hooks"},
+				tags = "@AddProgram_10",//location of step definition files
 				plugin = {"pretty", //For the Detailed output and generating reports.
-							"html:target/Cucumber-Reports/Team17_APINinjas.html" ,
+							"html:target/Cucumber-Reports/Team22_WebWarriors.html" ,
 							"json:target/Cucumber-Reports/Team17_APINinjas.json" , 
 							"junit:target/Cucumber-Reports/Team17_APINinjas.xml",
 							"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 							"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 						}
-				) 
+				)
+				 
 
 
 		public class TestRunner extends AbstractTestNGCucumberTests{
