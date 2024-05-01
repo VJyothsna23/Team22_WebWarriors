@@ -141,12 +141,6 @@ public class ProgramAdd_SD {
 		    pa.clickClose();
 	}
 
-	@Then("Program Details popup window should be closed without saving")
-	public void program_details_popup_window_should_be_closed_without_saving() throws InterruptedException {
-	 assertTrue(commonMethods.validator(pa.searchValidation(),"Showing 0 to 0 of 0 entries"));
-		//Assert.assertEquals(pa.searchValidation(),"Showing 0 to 0 of 0 entries");
-		
-	}
 
 	@When("Enter valid {string} and {string} ,status and click Save button in add program")
 	public void enter_valid_and_status_and_click_save_button_in_add_program(String proganame, String progDesc) {

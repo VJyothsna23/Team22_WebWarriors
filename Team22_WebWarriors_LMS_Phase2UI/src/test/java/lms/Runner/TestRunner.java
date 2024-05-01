@@ -13,7 +13,7 @@ package lms.Runner;
 				 //tags from feature file
 				features = {"src/test/resources/features"}, //location of feature files
 				glue= {"lms.StepDefinitions","lms.Hooks"},
-				tags = "@AddProgram_10",//location of step definition files
+				tags = "@Pagination_03",//location of step definition files
 				plugin = {"pretty", //For the Detailed output and generating reports.
 							"html:target/Cucumber-Reports/Team22_WebWarriors.html" ,
 							"json:target/Cucumber-Reports/Team17_APINinjas.json" , 

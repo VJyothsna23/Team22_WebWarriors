@@ -1,4 +1,4 @@
-@ProgramModule
+@ProgramModule_Navigation
 Feature: Pagination
 
   Background: Admin is on dashboard page after Login and clicks Program on the navigation bar

@@ -59,7 +59,7 @@ Examples:
 Scenario: Validate Cancel/Close(X) icon on Program Details form
 Given Admin is on "Program Details" Popup window
 When 	Admin clicks Cancel or Close Icon on Program Details form in add program
-Then Program Details popup window should be closed without saving
+Then Admin can see the Program details popup disappears without creating any program
 			
 @AddProgram_10			
 Scenario Outline: Validate Save button on Program Details form
@@ -70,9 +70,9 @@ Given Admin is on "Program Details" Popup window
 Examples:
 
 |ProgramName| ProgramDescription|
-|QAShar004   | Team22            |
-|QAShar005   | Team22            |
-|QAShar006   | Team22            |
+|QAShar016  | Team22            |
+|QAShar017   | Team22            |
+|QAShar018   | Team22            |
 	
 	
 

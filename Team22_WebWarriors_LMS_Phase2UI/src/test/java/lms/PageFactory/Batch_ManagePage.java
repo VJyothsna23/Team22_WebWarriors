@@ -1,10 +1,15 @@
 package lms.PageFactory;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import lms.Utils.ConfigReader;
 import lms.Utils.commonMethods;
@@ -28,13 +33,14 @@ public class Batch_ManagePage {
 	@FindBy(xpath = "//input[@id='filterGlobal']") public  WebElement searchBarBM;
 	@FindBy(xpath = "//span[@class='p-paginator-current ng-star-inserted']") public  WebElement searchBarErrorBM;
 	@FindBy(xpath = "//span[@class='p-checkbox-icon']") public WebElement checkboxBM;
-	@FindBy(xpath = "//div/button[@icon='pi pi-trash']") public  WebElement topdeleteBatchButton;	
+	@FindBy(xpath = "//div/button[@icon='pi pi-trash']") public  WebElement topdeleteBatchButton;
+	@FindBy(xpath = "//div[text()=' Manage Batch']") public  WebElement manageBatchText;
 	
 	
 	
 	
 
-	@FindBy(xpath = "//h1[text()='Manage Batch']") public  WebElement manageBatchText;
+	
 	@FindBy(xpath = "//button[text()='Delete Programs']") public  WebElement deleteBatchesButton;
 
 	
@@ -78,11 +84,12 @@ public class Batch_ManagePage {
 		String url = ConfigReader.readPropertiesFile("HomePageUrl");
 		driver.get(url);
 		login();
-		commonMethods.actionsClick(batchLinkBM,driver);
+		
 	}
 	
 	public String HeaderVaidation() {
-		String header=LMSValidation.getText();
+		String header=manageBatchText.getText();
+		System.out.println(header);
 		return header;
 	}
 	
@@ -92,6 +99,37 @@ public class Batch_ManagePage {
 		return url;
 		
 	}
+	
+public Boolean headerTextValidation() {
+		
+		
+		List<String> expheader = Arrays.asList("","Batch Name","Batch Description","Batch Status","No Of Classes","Program Name","Edit / Delete");
+		List<String> actualheader=new ArrayList<String>();
+		//Boolean head = null;
+		for(WebElement Header:colHeaders)
+		{
+		String headertext=Header.getText();
+		actualheader.add(headertext);
+		
+		}
+		
+		//assertEquals(actualheader, expheader);
+		
+		return actualheader.equals(expheader);
+		
+	}
+
+public Boolean topDelete() {
+	if(!topdeleteBatchButton.isEnabled())
+	return true;
+	else
+		return false;
+}
+
+public Boolean addNewBatchButton() {
+	addNewBatchButton.isDisplayed();
+	return true;
+}
 	
 	public void clickprog() {
 		commonMethods.actionsClick(programLinkBM, driver);
@@ -118,8 +156,8 @@ public class Batch_ManagePage {
 		commonMethods.actionsClick(deleteBatchButton, driver);
 	}
 	
-	public String validateAdd() {
-		String add=addNewBatchPage.getText();
+	public Boolean validateAdd() {
+		Boolean add=addNewBatchPage.isDisplayed();
 		return add;
 	}
 	

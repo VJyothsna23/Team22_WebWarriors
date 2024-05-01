@@ -43,7 +43,7 @@ public class Program_AddPage {
 		@FindBy(xpath="//span[@class='p-paginator-current ng-star-inserted']") public WebElement searchValidation;
 		@FindBy(xpath = "//input[@id='Active']/../../..") public  WebElement activeButton;
 		@FindBy(xpath = "//input[@id='Inactive']/../../..") public  WebElement inactiveButton;
-		@FindBy(xpath="//div[@class='p-toast-detail ng-tns-c90-5']") public WebElement successMsg;
+		@FindBy(xpath="//div[text()='Program Created Successfully']") public WebElement successMsg;
 		
 
 	public Program_AddPage(WebDriver driver){
@@ -236,15 +236,17 @@ public void clickClose() {
 	commonMethods.actionsClick(closeButton, driver);
 }
 
-public void searchforProg() {
+public void searchforProg() throws InterruptedException {
+	commonMethods.waitForElementToBeVisible(driver, searchButton);
 	commonMethods.actionsSendKeys(driver, searchButton, "WWW");
-	
+	Thread.sleep(1000);
 }
 
 public String searchValidation() throws InterruptedException {
 searchforProg();
-Thread.sleep(2000);
+commonMethods.waitForElementToBeVisible(driver, searchValidation);
 String search=searchValidation.getText();
+System.out.println(search);
 return search;
 
 }
@@ -252,6 +254,7 @@ return search;
 
 public String successMsg() {
 	String msg=successMsg.getText();
+	System.out.println(msg);
 	return msg;
 }
 }

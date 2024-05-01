@@ -93,17 +93,21 @@ public class ProgramPagination_SD {
 	@When("Admin is on the Last page and clicks first icon")
 	public void admin_is_on_the_last_page_and_clicks_first_icon() throws InterruptedException {
 	    pp.firstNextPreviousLast("last");
+	    Thread.sleep(1000);
 	    pp.firstNextPreviousLast("first");
+	    Thread.sleep(1000);
 	}
 
 	@Then("Admin is navigated to First page with {string} page link disabled")
 	public void admin_is_navigated_to_first_page_with_page_link_disabled(String icon) throws InterruptedException {
-		 Assert.assertTrue(pp.isPageHighlighted(pp.totalPagesCount()));//if page is highlighted
-		   String nexticon = icon.trim().toLowerCase();
-
-			if(nexticon.equals("first")) {
-				pp.isFirstNextPreviousLastIconEnabled("first");
-			}
+		 Assert.assertTrue(pp.isPageHighlighted(1));//if page is highlighted
+		   
+		 
+//		 String nexticon = icon.trim().toLowerCase();
+//
+//			if(nexticon.equals("previous")) {
+//				pp.isFirstNextPreviousLastIconEnabled("previous");
+//			}
 	}
 
 }

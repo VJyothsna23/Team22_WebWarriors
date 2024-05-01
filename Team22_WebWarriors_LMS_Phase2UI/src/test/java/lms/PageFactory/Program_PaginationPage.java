@@ -16,9 +16,9 @@ public class Program_PaginationPage {
 	public WebDriver driver;
 	Program_ManagePage PMP;
 
-	@FindBy(xpath="//span[@class='p-paginator-pages ng-star-inserted']") public List<WebElement> pages;
+	@FindBy(xpath="//span//button[@type='button']") public List<WebElement> pages;
 	@FindBy(xpath="//button[@class = 'p-paginator-page p-paginator-element p-link p-highlight p-ripple ng-star-inserted']") public WebElement lastpage;
-	
+	@FindBy(xpath = "//span[@class = 'p-paginator-icon pi pi-angle-double-right']") public  WebElement doubleRightButton;
 
 	public Program_PaginationPage(WebDriver driver){
 		
@@ -38,8 +38,9 @@ public class Program_PaginationPage {
 	
 	public int totalPagesCount() throws InterruptedException {
 		int totalPages;
-		PMP.doubleRightButton.click();
-		Thread.sleep(5000);
+		commonMethods.waitForElementToBeClickable(driver, doubleRightButton);
+		//doubleRightButton.click();
+		Thread.sleep(1000);
 		String totalPagesText = lastpage.getText();
 		totalPages = Integer.parseInt(totalPagesText);
 //		doubleLeftButton.click();
@@ -59,7 +60,7 @@ public class Program_PaginationPage {
 		     commonMethods.actionsClick(PMP.nextPageButton, driver);
 			break;
 		case "last":
-		commonMethods.actionsClick(PMP.doubleRightButton, driver);
+		commonMethods.actionsClick(doubleRightButton, driver);
 			break;
 		case "previous":
 		commonMethods.actionsClick(PMP.LeftButton, driver);
@@ -105,17 +106,16 @@ public class Program_PaginationPage {
 	
 	public Boolean isPageHighlighted(int pageNum) {
 		String pagenum =Integer.toString(pageNum);
-		Boolean highlight=false;
+		System.out.println(pagenum);
 		for(WebElement eachpage : pages) {
-
-		if((eachpage.getAttribute("class").contains("p-highlight")&& (eachpage.getText()==pagenum)))
+        
+		if((eachpage.getAttribute("class").contains("p-highlight"))&&(eachpage.getText().equals(pagenum)))
 		{
-			highlight=true;
+			return true;
 		}
 		
-		}
-		return highlight;
-	
+		 }
+		return false;
 	}
 	
 	

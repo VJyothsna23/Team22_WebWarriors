@@ -111,8 +111,9 @@ public class Program_ManagePage {
 //	System.out.println(text);
 //	int total_Programs=Integer.parseInt(text.substring(text.indexOf("are")+4,text.indexOf("programs")-1));
 	
-	public boolean paginationcontrol() {	
-	Boolean icon = null;
+	public String entries() {
+
+	
 	String entries=paginationPM.getText();
 	System.out.println(entries);
 	String totalrows=(totalProgramsTextPM.getText()).replaceAll("[^0-9]","");
@@ -125,6 +126,13 @@ public class Program_ManagePage {
 	System.out.println(y);
 	System.out.println(z);
 	
+	String entriestext="Showing "+x+" to "+y+" of "+z+" entries";
+	return entriestext;
+	
+	}
+	
+	public boolean paginationcontrol() {	
+		Boolean icon = null;
 	if(doubleRightButton.isDisplayed()&&(doubleLeftButton.isDisplayed())&&(nextPageButton.isDisplayed())&&(LeftButton.isDisplayed())&&(numberpages.isDisplayed())) {
 		icon=true;
 	}
@@ -175,6 +183,7 @@ public class Program_ManagePage {
 	
 	public int totalPagesCount() throws InterruptedException {
 		int totalPages;
+		commonMethods.waitForElementToBeClickable(driver, doubleRightButton);
 		doubleRightButton.click();
 		String totalPagesText = lastPage.getText();
 		totalPages = Integer.parseInt(totalPagesText);
@@ -260,9 +269,6 @@ public class Program_ManagePage {
     	commonMethods.actionsClick(batchpage, driver);
     }
     
-    public void batchpageUrl() {
-    	
-    }
     public void userPage() {
     	commonMethods.actionsClick(userpage, driver);
     	userpage.click();

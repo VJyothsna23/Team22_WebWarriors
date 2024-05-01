@@ -57,7 +57,7 @@ public class ManageProgram_SD {
 	//pagination validation
 	@Then("Admin should see the text as {string} along with Pagination icon below the table.")
 	public void admin_should_see_the_text_as_along_with_pagination_icon_below_the_table(String string) {
-		pm.paginationcontrol();
+		assertTrue(pm.paginationcontrol());
 		//Assert.assertTrue("Showing" + x +);
 	}
 
