@@ -10,7 +10,10 @@ package lms.Runner;
 
 		@CucumberOptions(
 				monochrome = false,  //console output formatting
+
 				tags = "@Login", //tags from feature file
+				tags = "@LMS1 or @LMS2", //tags from feature file
+ master
 				features = {"src/test/resources/features"}, //location of feature files
 				glue= {"lms.StepDefinitions","lms.Hooks"}, //location of step definition files
 				plugin = {"pretty", //For the Detailed output and generating reports.
@@ -22,7 +25,6 @@ package lms.Runner;
 						}
 				) 
 
-
 		public class TestRunner extends AbstractTestNGCucumberTests{
 			
 			@Override
@@ -30,6 +32,6 @@ package lms.Runner;
 		    public Object[][] scenarios() {
 				
 				return super.scenarios();
-		    }
-	}
+	 }
+}
 	

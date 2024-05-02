@@ -2,6 +2,7 @@ package lms.Utils;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -36,6 +37,25 @@ public class commonMethods {
 		System.out.println("The number of items in the list are: "+ texts.size());
 		return texts;
 	}
+	
+	public static List<String> getSortedList(List<String> originalList){
+		System.out.println("original List Before sorting is"+ originalList);
+        List<String> sortedList = new ArrayList<>(originalList);
+        Collections.sort(sortedList, String.CASE_INSENSITIVE_ORDER);
+		System.out.println("Sorted List After sorting is"+ sortedList);
+
+        return sortedList;
+	}
+	
+	public static List<String> getSortedListDescending(List<String> originalList){
+		System.out.println("original List Before sorting is"+ originalList);
+        List<String> sortedList = new ArrayList<>(originalList);
+        Collections.sort(originalList, (s1, s2) -> s2.compareToIgnoreCase(s1));
+		System.out.println("Sorted List After sorting is"+ sortedList);
+
+        return sortedList;
+	}
+	
 
 	public static void waitForElementToBeClickable(WebDriver driver, WebElement element) {
 
@@ -69,6 +89,19 @@ public class commonMethods {
 		actions.sendKeys(element, input).perform();
 		
 	}
+	
+	public static String getElementTagName(WebElement element) {
+		
+		String tagName = element.getTagName();
+		System.out.println("Element tag name is: "+ tagName);
+		return tagName;	
+	}
 
+	public static String getattribute(WebElement element, String name) {
+		
+		String attributeValue = element.getAttribute(name);
+		System.out.println("Element's" +name+ "atrribute value is: "+ attributeValue);
+		return attributeValue;	
+	}
 
 }
