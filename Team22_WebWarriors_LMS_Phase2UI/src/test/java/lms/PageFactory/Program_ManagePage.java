@@ -47,6 +47,7 @@ public class Program_ManagePage {
 	@FindBy(xpath = "//span[@class='p-button-icon pi pi-pencil']") public List<WebElement> editProgramButton;
 	@FindBy(xpath = "//td//span[@class='p-button-icon pi pi-trash']") public  List<WebElement> eachrowdeleteProgramsButton;
 	@FindBy(xpath = "//input[@id='filterGlobal']") public  WebElement searchBarPM;
+	@FindBy(xpath = "//div/button[@icon='pi pi-trash']") public  WebElement topdeleteBatchButton;
 	
 	@FindBy(id = "username") public  WebElement userLP;
 	@FindBy(id = "password") public  WebElement passwordLP;
@@ -147,7 +148,8 @@ public class Program_ManagePage {
 	}
 	
 	public Boolean deletebutton() {
-	Boolean del=deleteProgramButton.isEnabled();
+	Boolean del=topdeleteBatchButton.isEnabled();
+	System.out.println(del);
 	return del;
 	}
 	
@@ -183,6 +185,7 @@ public class Program_ManagePage {
 	
 	public int totalPagesCount() throws InterruptedException {
 		int totalPages;
+		//commonMethods.waitForElementToBeVisible(driver, doubleRightButton);
 		commonMethods.waitForElementToBeClickable(driver, doubleRightButton);
 		doubleRightButton.click();
 		String totalPagesText = lastPage.getText();
@@ -241,7 +244,7 @@ public class Program_ManagePage {
     	String search=searchBarPM.getAttribute("placeholder");
     	System.out.println(search);
     	
-		return null;
+		return search;
     	
     }
     
