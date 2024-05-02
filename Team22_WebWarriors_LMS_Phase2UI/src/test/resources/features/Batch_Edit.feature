@@ -1,4 +1,4 @@
-@LMS2 @Batch_Edit
+@LMS @Batch_Edit
 Feature: Testing the Edit Batch feature of LMS application
 
   Background: Admin is on Edit Batch Details window

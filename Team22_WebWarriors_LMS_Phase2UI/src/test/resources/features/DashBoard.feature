@@ -1,4 +1,4 @@
- @LoginPage
+@LMS @LoginPage
 Feature: Testing the Login Page of LMS application
 
   Background: Admin gives the correct LMS portal URL

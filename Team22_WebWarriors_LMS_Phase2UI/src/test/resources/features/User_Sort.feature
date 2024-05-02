@@ -1,4 +1,4 @@
-@LMS @US
+@LMS @Usort
 Feature: Sort user
 
   Background: 

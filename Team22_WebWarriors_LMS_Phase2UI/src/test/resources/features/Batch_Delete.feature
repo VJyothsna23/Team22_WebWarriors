@@ -1,4 +1,5 @@
 @LMS @Batch_Delete
+
 Feature: Testing the Delete Batch and Delete Multiple Batches confirmation windows of LMS application
 
   Background: Admin is on Manage Batch Page after clicking Batch on the navigation bar

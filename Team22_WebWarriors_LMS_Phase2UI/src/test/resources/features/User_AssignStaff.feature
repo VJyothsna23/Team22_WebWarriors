@@ -2,7 +2,7 @@
 Feature: LMS TC: 0003 User Assign Student feature
 Background: Admin is on dashboard page after Login and clicks User on the navigation bar
 Given Admin login and Admin clicks User on the navigation bar
-When Admin is on "Manage User" Page
+When Admin is on Manage User Page
 Then Admin clicks "Assign Staff" button
 
 Scenario: Validate Assign Staff Popup window
@@ -20,6 +20,9 @@ Given Admin should see two radio button for Status in Assign Staff
 Scenario: Empty Form Submission
 Given Admin gets a Error message alert for Assign Staff
 
+Scenario: Validate Save button on Assign Staff form
+Then Admin gets a message "Successfully Staff Assigned" alert in Assign Staff
+
 Scenario: Validate the Assign Staff form page without giving Student Email id
 Then Admin gets a Error message alert as "Student Email id is required" in Assign Staff
 
@@ -29,9 +32,6 @@ Then Admin gets a Error message alert as Batch is required in Assign Staff
 
 Scenario: Validate Cancel/Close(X) icon on Assign Staff form
 Then Assign Staff popup window should be closed without saving
-
-Scenario: Validate Save button on Assign Staff form
-Then Admin gets a message "Successfully Staff Assigned" alert in Assign Staff
 
 Scenario: Validate Cancel button on Assign Staff form
 Then Admin can see the Assign Staff popup disappears without assigning 

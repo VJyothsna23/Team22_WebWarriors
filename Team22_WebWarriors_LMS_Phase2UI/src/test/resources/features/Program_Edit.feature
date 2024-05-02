@@ -1,4 +1,4 @@
-@LMS1 @Program_Edit
+@LMS @Program_Edit
 Feature: Testing the Edit Program feature of LMS application
 
   Background: Admin is on Edit Program Details window

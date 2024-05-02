@@ -21,13 +21,13 @@ public class User_DeleteMultipleUserSteps {
 		this.delMultipleUser = testContext.getUdm();
 	}
 
-	@Then("Admin clicks any checkbox in the data table")
-	public void admin_clicks_any_checkbox_in_the_data_table() {
+	@Then("Admin clicks any checkbox in the data table in DeleteMultiple")
+	public void admin_clicks_any_checkbox_in_the_data_table_in_DeleteMultiple() {
 		delMultipleUser.clickCheckBox();
 	}
 
-	@And("Admin should see common delete option enabled under header Manage Program")
-	public void admin_should_see_common_delete_option_enabled_under_header_manage_program() {
+	@And("Admin should see common delete option enabled under header Manage User")
+	public void admin_should_see_common_delete_option_enabled_under_header_manage_user() {
 		delMultipleUser.verifyCommonDel();
 	}
 

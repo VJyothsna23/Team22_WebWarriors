@@ -3,7 +3,7 @@ Feature: LMS TC: 0003 User Assign Student feature
 Background:
 Admin is on dashboard page after Login and clicks User on the navigation bar 
 	Given Admin login and Admin clicks User on the navigation bar 
-	When Admin is on "Manage User" Page 
+	When Admin is on Manage User Page 
 	Then Admin clicks on "Assign Student" button 
 	
 Scenario: Validate Assign Student Popup window 

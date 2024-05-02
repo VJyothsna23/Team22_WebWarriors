@@ -1,4 +1,4 @@
-@LMS @UE
+@LMS @UserEdit
 Feature: Edit new user
 
   Background: Admin is on Manage User page
