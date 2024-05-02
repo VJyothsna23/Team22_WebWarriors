@@ -44,8 +44,6 @@ public class DashBoardPage {
 	@FindBy(xpath = "//button[@id='login']") public  WebElement loginbtn;
 //	@FindBy(xpath = "//span[text()='Program']") public  WebElement programbtn;
 //	@FindBy(xpath = "//span[text()='Batch']") public  WebElement batchbtn;
-//	@FindBy(xpath = "//span[text()='User']") public  WebElement userbtn;
-//	@FindBy(xpath = "//span[text()='Logout']") public  WebElement logoutbtn;
 	@FindBys(@FindBy(xpath="//mat-toolbar/button")) List<WebElement> allElements;
 //	List<WebElement> allElements=driver.findElements(By.xpath("//mat-toolbar/button"));
 	List<String> all_elements_text=new ArrayList<>();

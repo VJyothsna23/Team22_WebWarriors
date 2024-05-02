@@ -20,7 +20,7 @@ public class AppLogin_SD {
 		this.testContext = testContext;
 		this.driver = testContext.getDriver();
 		this.lp = testContext.getLp();
-	}
+			}
 
 @Given("User enters LMS application url")
 public void user_enters_lms_application_url() {

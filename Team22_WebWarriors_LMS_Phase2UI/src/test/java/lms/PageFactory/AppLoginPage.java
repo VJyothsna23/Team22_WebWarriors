@@ -1,5 +1,13 @@
 package lms.PageFactory;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
+
 import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -13,21 +21,11 @@ import org.testng.Assert;
 import com.swabunga.spell.engine.SpellDictionaryHashMap;
 import com.swabunga.spell.event.SpellChecker;
 
-import java.net.HttpURLConnection;
-import java.util.List;
-import java.util.Iterator;
 import lms.Utils.ConfigReader;
 import lms.Utils.LoggerLoad;
-
-import java.net.URL;
-import java.net.MalformedURLException;
-import java.io.File;
-import java.io.IOException;
-import static org.testng.Assert.assertTrue;
-
 import net.sourceforge.tess4j.ITesseract;
-import net.sourceforge.tess4j.TesseractException;
 import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 
 public class AppLoginPage  {
 	

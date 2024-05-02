@@ -1,4 +1,4 @@
-@LMS @LoginPage
+@LoginPage
 Feature: Testing the Login Page of LMS application
 
   Background: User is on the LMS Login page
