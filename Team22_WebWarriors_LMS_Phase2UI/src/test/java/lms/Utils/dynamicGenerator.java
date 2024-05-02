@@ -26,6 +26,13 @@ public class dynamicGenerator {
         return uniqueName;
     }
     
+    public static String generatebatchNameForDelete() {
+        String baseBatchName = "DWebQa";
+        String timestamp = generateTimestamp();
+        String uniqueName = baseBatchName + timestamp;
+        return uniqueName;
+    }
+    
     public static String generatebatchNameForEdit() {
         String baseBatchName = "EWebQa";
         String timestamp = generateTimestamp();

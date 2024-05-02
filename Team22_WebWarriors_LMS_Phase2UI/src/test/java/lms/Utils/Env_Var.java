@@ -10,4 +10,5 @@ public class Env_Var {
 	public static int totalNoOfPages;
 	public static String batchName;
 	public static String progName;
+	public static List<String> bName = new ArrayList<>();
 }

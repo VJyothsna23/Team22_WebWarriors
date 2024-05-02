@@ -33,8 +33,7 @@ public class Batch_AddPage {
 		@FindBy(id = "batchStatus") public  WebElement batchStatus;		
 		@FindBy(xpath = "//input[@id='ACTIVE']/../..") public  WebElement activeButton;
 		@FindBy(xpath = "//input[@id='Inactive']/../../..") public  WebElement inactiveButton;
-		@FindBy(xpath = "//span[text()='Save']") public  WebElement saveButton;		
-		
+		@FindBy(xpath = "//span[text()='Save']") public  WebElement saveButton;				
 		@FindBy(xpath = "//tbody//tr[1]//td[2]") public  WebElement batchNameColumnValue;
 		@FindBy(xpath = "//tbody//tr[1]//td[3]") public  WebElement batchDescColumnValue;
 		@FindBy(xpath = "//tbody//tr[1]//td[4]") public  WebElement batchStatusColumnValue;

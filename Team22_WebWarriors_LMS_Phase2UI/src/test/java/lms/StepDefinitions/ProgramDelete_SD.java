@@ -26,11 +26,6 @@ public class ProgramDelete_SD{
 		this.pd = testContext.getPd();
 	}
 	
-//	@When("Admin is on Manage Program page and creates a program for delete validations")
-//	public void admin_is_on_manage_program_page_and_creates_program_for_delete_validations() throws InterruptedException {
-//		pd.getOnMPPageCreateProgramForDelete();
-//	}
-	
 	@When("Admin clicks Delete program button on the data table for any row")
 	public void admin_clicks_delete_program_button_on_the_data_table_for_any_row() throws InterruptedException {
 		pd.createProgramForDelete();
@@ -44,11 +39,6 @@ public class ProgramDelete_SD{
 		assertTrue(pd.NoButton.isDisplayed());
 	}
 	
-//	@When("Admin clicks Delete program button on the data table")
-//	public void admin_clicks_delete_program_button_on_the_data_table() throws InterruptedException {
-//		pd.deleteConfirmPopup();
-//	}
-
 	@Then("Admin should see a message {string} for program deletion")
 	public void admin_should_see_a_message_for_program_deletion(String string) throws InterruptedException {
 		String expectedText = "Are you sure you want to delete " +pd.getText("delProgName")+ "?";
@@ -83,7 +73,6 @@ public class ProgramDelete_SD{
 		assertTrue(commonMethods.validator(pd.getSuccessDeleteMessageText(),"Successful Program Deleted"));
 		pd.searchdeletedProgram1();
 		assertTrue((pd.ShowingZeroText).getText().equals("Showing 0 to 0 of 0 entries"));
-//		Env_Var.programNameDel.remove(0);
 	}
 	
 	@When("Admin clicks any checkbox in the data table")
@@ -116,7 +105,6 @@ public class ProgramDelete_SD{
 	public void admin_should_land_on_manage_program_page_and_can_see_the_selected_programs_are_not_deleted_from_the_data_table() throws InterruptedException {
 		pd.searchdeletedProgram();
 	    assertTrue((pd.deleteprogramName1).isDisplayed());
-//	    pd.searchdeletedProgram2();
 	    assertTrue((pd.deleteprogramName2).isDisplayed());
 	}
 
@@ -130,10 +118,6 @@ public class ProgramDelete_SD{
 		assertTrue(commonMethods.validator(pd.getSuccessProgramsDeleteMessageText(),"Successful Programs Deleted"));
 		pd.searchdeletedProgram1();
 	    assertTrue((pd.ShowingZeroText).getText().equals("Showing 0 to 0 of 0 entries"));
-	    //validate after refreshing the page
-//	    pd.refreshPage();
-//	    pd.searchdeletedProgram1();
-//	    assertTrue((pd.ShowingZeroText).isDisplayed());
 	    Env_Var.programNameDel.remove(0);
 	}
 	
@@ -149,12 +133,7 @@ public class ProgramDelete_SD{
 	    assertTrue((pd.ShowingZeroText).getText().equals("Showing 0 to 0 of 0 entries"));
 	    pd.searchdeletedProgram2();
 	    assertTrue((pd.ShowingZeroText).getText().equals("Showing 0 to 0 of 0 entries"));
-	  //validate after refreshing the page
-//	    pd.refreshPage();
-//	    pd.searchdeletedProgram1();
-//	    assertTrue((pd.ShowingZeroText).isDisplayed());
-//	    pd.searchdeletedProgram2();
-//	    assertTrue((pd.ShowingZeroText).isDisplayed());
+
 	}
 
 }
