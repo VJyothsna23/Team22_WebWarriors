@@ -69,7 +69,6 @@ public class User_DeleteMultipleUserSteps {
 
 	@Then("Admin should land on Manage User page and can see the selected users are not deleted from the data table")
 	public void admin_should_land_on_manage_user_page_and_can_see_the_selected_users_are_not_deleted_from_the_data_table() {
-		System.out.println("----------------------------");
 		delMultipleUser.clickMulCheckBox();
 	}
 

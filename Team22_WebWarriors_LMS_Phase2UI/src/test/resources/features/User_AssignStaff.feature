@@ -1,3 +1,4 @@
+@LMS
 Feature: LMS TC: 0003 User Assign Student feature
 Background: Admin is on dashboard page after Login and clicks User on the navigation bar
 Given Admin login and Admin clicks User on the navigation bar
@@ -22,21 +23,10 @@ Given Admin gets a Error message alert for Assign Staff
 Scenario: Validate the Assign Staff form page without giving Student Email id
 Then Admin gets a Error message alert as "Student Email id is required" in Assign Staff
 
-#### Bug
-#Scenario: Validate the Assign Staff form page without giving Skill
-#Then Admin gets a Error message alert as "Skill is required" in Assign Staff
-
-#Scenario: Validate the Assign Staff form page without selecting Program
-#Then Admin gets a Error message alert as "Program is required" in Assign Staff
-#########
-
 
 Scenario: Validate the Assign Staff form page without selecting batch
 Then Admin gets a Error message alert as Batch is required in Assign Staff 
-#
-#Scenario: Validate the Assign Staff form page without giving Status
-#Then Admin gets a Error message alert as "Status is required" in Assign Staff
-#
+
 Scenario: Validate Cancel/Close(X) icon on Assign Staff form
 Then Assign Staff popup window should be closed without saving
 

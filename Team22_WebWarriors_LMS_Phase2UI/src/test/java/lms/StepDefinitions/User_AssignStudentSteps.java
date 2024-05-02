@@ -60,41 +60,6 @@ public class User_AssignStudentSteps {
 	}
 
 
-	@Then("Admin gets a Error message alert as {string}")
-	public void admin_gets_a_error_message_alert_as(String string) {
-
-	}
-
-	@When("Admin clicks {string} button without selecting program")
-	public void admin_clicks_button_without_selecting_program(String string) {
-
-	}
-
-	@When("Admin clicks {string} button without selecting batch")
-	public void admin_clicks_button_without_selecting_batch(String string) {
-
-	}
-
-	@When("Admin clicks Cancel\\/Close\\(X) Icon on Assign Student form")
-	public void admin_clicks_cancel_close_x_icon_on_assign_student_form() {
-
-	}
-
-	@Then("Assign Student popup window should be closed without saving")
-	public void assign_student_popup_window_should_be_closed_without_saving() {
-
-	}
-
-	@When("Enter all the required fields with valid values and click Save button")
-	public void enter_all_the_required_fields_with_valid_values_and_click_save_button() {
-
-	}
-
-	@Then("Admin gets a message {string} alert")
-	public void admin_gets_a_message_alert(String string) {
-
-	}
-
 	@When("Admin clicks <Cancel> button")
 	public void admin_clicks_cancel_button() {
          uas.eleCancel.click();

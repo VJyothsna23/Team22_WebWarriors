@@ -46,22 +46,22 @@ public class User_AssignStaffSteps {
 
 	@Given("Admin gets a Error message alert for Assign Staff")
 	public void admin_gets_a_error_message_alert_for_assign_staff() {
-		//uastf.validate_without_data();
+		uastf.validate_without_data();
 	}
 
 	@Then("Admin gets a Error message alert as {string} in Assign Staff")
 	public void admin_gets_a_error_message_alert_as_in_assign_staff(String string) {
-		//uastf.verifyEmailErrorMsg();
+		uastf.verifyEmailErrorMsg();
 	}
 
 	@Then("Assign Staff popup window should be closed without saving")
 	public void assign_staff_popup_window_should_be_closed_without_saving() {
-		//uastf.eleCloseButton.click();
+		uastf.eleCloseButton.click();
 	}
 
 	@Then("Admin gets a Error message alert as Batch is required in Assign Staff")
 	public void admin_gets_a_error_message_alert_as_batch_is_required_in_assign_staff() {
-	//	uastf.verifyBatchErrorMsg();
+	     uastf.verifyBatchErrorMsg();
 	}
 
 	@Then("Admin gets a message {string} alert in Assign Staff")

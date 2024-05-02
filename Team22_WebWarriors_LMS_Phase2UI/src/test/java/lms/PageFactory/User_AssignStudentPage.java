@@ -125,7 +125,8 @@ public class User_AssignStudentPage {
 
 		eleEmailIdDropDown.isEnabled();
 		/*
-		 * try { eleProgramDropDown.isEnabled(); eleBatchNameDropDown.isEnabled(); }
+		 * try { eleProgramDropDown.isEnabled(); 
+		 * eleBatchNameDropDown.isEnabled(); }
 		 * catch (NoSuchElementException e) {
 		 * 
 		 * }

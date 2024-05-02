@@ -1,3 +1,4 @@
+@LMS
 Feature: LMS TC: 0002 Delete Multiple User feature
 Background: Admin is on dashboard page after Login and clicks user on the navigation bar
 Given Admin login and Admin clicks User on the navigation bar
