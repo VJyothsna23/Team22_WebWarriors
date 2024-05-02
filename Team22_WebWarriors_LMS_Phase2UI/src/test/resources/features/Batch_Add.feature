@@ -1,4 +1,4 @@
-@LMS @Batch_Add
+@LMS2 @Batch_Add
 Feature: Testing the Add New Batch window of LMS application
 
   Background: Admin is on Add Batch Details window
@@ -17,7 +17,8 @@ Feature: Testing the Add New Batch window of LMS application
       | Status            | radio button |
       | Number of Classes | text box     |
 
-  @BA2
+	# Expected to Fail
+  @BA2 
   Scenario: Validate if description is optional field
     When Admin enters all the fields except description with valid values and clicks save for Add Batch
     Then The newly added batch should be present in the data table in Manage Batch page

@@ -49,7 +49,7 @@ public class Batch_AddPage {
 	public Batch_AddPage(WebDriver driver){
 		this.driver = driver;
         PageFactory.initElements(driver, this);
-        PEP = new Program_EditPage(driver);
+        PEP = new Program_EditPage(driver);      
     }
 	
 	public void addBatchDetailsWindow() {
@@ -61,6 +61,7 @@ public class Batch_AddPage {
 		String batchname = dynamicGenerator.generatebatchNameForAdd();
 		batchName.sendKeys(batchname);
 		Env_Var.batchName = batchname ;
+		Thread.sleep(1000);
 		batchDesc.sendKeys("team22");
 		programNameDropdownButton.click();
 		Thread.sleep(1000);

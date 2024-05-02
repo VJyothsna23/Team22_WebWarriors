@@ -1,4 +1,4 @@
-@LMS @Program_Edit
+@LMS1 @Program_Edit
 Feature: Testing the Edit Program feature of LMS application
 
   Background: Admin is on Edit Program Details window
@@ -47,7 +47,3 @@ Feature: Testing the Edit Program feature of LMS application
     When Admin changes the Program Status and clicks save button
     Then Admin gets a message "Successful Program Updated" alert and able to see the updated status in the table for the particular program
     
-   #@PE8
-   #Scenario: Validate pagination checkBox Feature
-  #	When Admin navigates through pages
-    #Then Admin should see a checkbox for each data row

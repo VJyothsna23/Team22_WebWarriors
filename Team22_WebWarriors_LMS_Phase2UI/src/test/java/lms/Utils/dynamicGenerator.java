@@ -25,6 +25,20 @@ public class dynamicGenerator {
         String uniqueName = baseBatchName + timestamp;
         return uniqueName;
     }
+    
+    public static String generatebatchNameForEdit() {
+        String baseBatchName = "EWebQa";
+        String timestamp = generateTimestamp();
+        String uniqueName = baseBatchName + timestamp;
+        return uniqueName;
+    }
+    
+    public static String generateProgNameForAdd() {
+        String baseBatchName = "AWebQa";
+        String timestamp = generateTimestamp();
+        String uniqueName = baseBatchName + timestamp;
+        return uniqueName;
+    }
 
     private static String generateTimestamp() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");

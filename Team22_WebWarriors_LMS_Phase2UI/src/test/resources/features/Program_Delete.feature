@@ -1,4 +1,4 @@
-@LMS @Program_Delete
+@LMS2 @Program_Delete
 Feature: Testing the Delete Program feature of LMS application
 
   Background: Admin is on Manage Program Page after clicking Program on the navigation bar
@@ -50,6 +50,7 @@ Feature: Testing the Delete Program feature of LMS application
     When Admin clicks <YES> button on the alert after selecting Single checkbox
     Then Admin should land on Manage Program page and can see the selected program is deleted from the data table
     
+  # Expected to Fail
   @PD10
   Scenario: Validate multiple program deletion by selecting multiple check boxes with YES selection
     When Admin clicks <YES> button on the alert after selecting multiple checkboxes
