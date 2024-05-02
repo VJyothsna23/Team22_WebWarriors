@@ -1,3 +1,4 @@
+@LMS
 Feature: LMS TC: 0001 User Delete feature
 Background: Admin is on dashboard page after Login and clicks User on the navigation bar
 Given Admin login and Admin clicks User on the navigation bar
