@@ -1,19 +1,16 @@
 package lms.Runner;
 	
-	import org.junit.runner.RunWith;
 	import org.testng.annotations.DataProvider;
-	import io.cucumber.testng.AbstractTestNGCucumberTests;
-	import io.cucumber.testng.CucumberOptions;
-	import io.cucumber.junit.Cucumber;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 		
 	//@RunWith(Cucumber.class) //Junit execution
 
 		@CucumberOptions(
 				monochrome = false,  //console output formatting
 
-				tags = "@Login", //tags from feature file
-				tags = "@LMS1 or @LMS2", //tags from feature file
- master
+				tags = "@LMS", //tags from feature file
 				features = {"src/test/resources/features"}, //location of feature files
 				glue= {"lms.StepDefinitions","lms.Hooks"}, //location of step definition files
 				plugin = {"pretty", //For the Detailed output and generating reports.

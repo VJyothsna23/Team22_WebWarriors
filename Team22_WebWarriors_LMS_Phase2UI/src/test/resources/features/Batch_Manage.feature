@@ -1,4 +1,4 @@
-@LMS1 @ManageBatch_Module
+@LMS @ManageBatch_Module
 Feature: Batch Page Validation Feature
 
   Background: The Admin is logged in to LMS portal

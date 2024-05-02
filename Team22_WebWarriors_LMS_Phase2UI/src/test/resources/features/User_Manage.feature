@@ -1,4 +1,4 @@
-@LMS @UM
+@LMS @UManage
 Feature: User page validation
 
   Background: 

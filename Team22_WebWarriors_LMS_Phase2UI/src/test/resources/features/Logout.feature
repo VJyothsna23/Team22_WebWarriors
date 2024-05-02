@@ -1,3 +1,4 @@
+
 @LMS @LoginPage
 Feature: Logout function
 

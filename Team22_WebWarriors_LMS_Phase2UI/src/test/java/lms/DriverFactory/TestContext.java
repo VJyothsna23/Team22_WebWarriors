@@ -39,6 +39,7 @@ public class TestContext {
 	User_AddPage ua;
 	User_EditPage ue;
 	User_DeletePage ud;
+	User_DeleteMultiplePage udm;
 	User_AssignStudentPage uas;
 	User_AssignStaffPage uastf;
 	
@@ -155,6 +156,10 @@ public class TestContext {
 	public User_DeletePage getUd() {
 		return ud;
 	}
+	
+	public User_DeleteMultiplePage getUdm() {
+		return udm;
+	}
 
 	public User_AssignStudentPage getUas() {
 		return uas;
@@ -188,6 +193,7 @@ public class TestContext {
 		this.ua = new User_AddPage(driver);
 		this.ue = new User_EditPage(driver);
 		this.ud = new User_DeletePage(driver);
+		this.udm = new User_DeleteMultiplePage(driver);
 		this.uas = new User_AssignStudentPage(driver);
 		this.uastf = new User_AssignStaffPage(driver);
 		

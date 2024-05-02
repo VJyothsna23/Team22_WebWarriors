@@ -31,17 +31,17 @@ public class User_AssignStaffSteps {
 
 	@Given("Admin should see User Role as R02,and other fields Student Email id,Skill,Program Name,Batch Name and Status with respective input boxes.")
 	public void admin_should_see_user_role_as_r02_and_other_fields_student_email_id_skill_program_name_batch_name_and_status_with_respective_input_boxes() {
-		//uastf.validate_input_fields();
+		uastf.validate_input_fields();
 	}
 
 	@Given("Admin should see drop down boxes with valid datas for Student Email id,Program Name and Batch Name in Assign Staff")
 	public void admin_should_see_drop_down_boxes_with_valid_datas_for_student_email_id_program_name_and_batch_name_in_assign_staff() {
-		//uastf.validate_drop_down();
+		uastf.validate_drop_down();
 	}
 
 	@Given("Admin should see two radio button for Status in Assign Staff")
 	public void admin_should_see_two_radio_button_for_status_in_assign_staff() {
-		//uastf.validate_radio_Button();
+		uastf.validate_radio_Button();
 	}
 
 	@Given("Admin gets a Error message alert for Assign Staff")

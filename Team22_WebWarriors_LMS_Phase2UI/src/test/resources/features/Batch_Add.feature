@@ -1,4 +1,4 @@
-@LMS2 @Batch_Add
+@LMS @Batch_Add
 Feature: Testing the Add New Batch window of LMS application
 
   Background: Admin is on Add Batch Details window

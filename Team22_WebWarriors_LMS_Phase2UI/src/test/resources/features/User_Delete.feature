@@ -2,8 +2,8 @@
 Feature: LMS TC: 0001 User Delete feature
 Background: Admin is on dashboard page after Login and clicks User on the navigation bar
 Given Admin login and Admin clicks User on the navigation bar
-When Admin is on "Manage User" Page
-Then Admin clicks the delete icon
+When Admin is on Manage User Page
+Then Admin clicks the delete icon 
 
 
 Scenario: Validate row level delete icon

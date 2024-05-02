@@ -1,4 +1,4 @@
-@LMS2 @Program_Delete
+@LMS @Program_Delete
 Feature: Testing the Delete Program feature of LMS application
 
   Background: Admin is on Manage Program Page after clicking Program on the navigation bar

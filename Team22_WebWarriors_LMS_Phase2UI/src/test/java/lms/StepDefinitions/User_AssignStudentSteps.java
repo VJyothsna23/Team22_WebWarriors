@@ -54,8 +54,8 @@ public class User_AssignStudentSteps {
           uas.eleSave.click();
 	}
 
-	@Then("Admin gets a Error message alert")
-	public void admin_gets_a_error_message_alert() {
+	@Then("Admin gets a Error message alert in assign student user page")
+	public void admin_gets_a_error_message_alert_in_assign_student_user_page() {
 		uas.validate_without_data();
 	}
 

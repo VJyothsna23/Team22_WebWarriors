@@ -1,4 +1,4 @@
-@LMS1 @ManageProgram
+@LMS @ManageProgram
 Feature: Manage Program Validation
 
   Background: Logged on the LMS portal

@@ -1,4 +1,4 @@
-@LMS2 @Program_Sort
+@LMS @Program_Sort
 Feature: Testing the Sorting(Data Ordering) feature of LMS application
 
   Background: Admin is on Manage Program Page after clicking Program on the navigation bar

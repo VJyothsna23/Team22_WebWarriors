@@ -2,9 +2,9 @@
 Feature: LMS TC: 0002 Delete Multiple User feature
 Background: Admin is on dashboard page after Login and clicks user on the navigation bar
 Given Admin login and Admin clicks User on the navigation bar
-When Admin is on "Manage User" Page
-Then Admin clicks any checkbox in the data table
-And Admin should see common delete option enabled under header Manage Program
+When Admin is on Manage User Page
+Then Admin clicks any checkbox in the data table in DeleteMultiple
+And Admin should see common delete option enabled under header Manage User
 
 Scenario: Validate multiple program deletion by selecting Single checkbox
 Given Admin is on Confirm Deletion alert

@@ -1,7 +1,5 @@
 package lms.StepDefinitions;
 
-import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -11,7 +9,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lms.DriverFactory.TestContext;
 import lms.PageFactory.User_AddPage;
-import lms.PageFactory.User_ManagePage;
 import lms.Utils.commonMethods;
 
 public class User_Add_SD {
@@ -100,8 +97,8 @@ public class User_Add_SD {
 //       }
 	
 	
-	@When("Admin clicks Cancel\\/Close\\(X) Icon on User Details form")
-	public void admin_clicks_cancel_close_x_icon_on_user_details_form() throws InterruptedException {
+	@When("Admin clicks Close Icon on User Details form")
+	public void admin_clicks_close_icon_on_user_details_form() throws InterruptedException {
 	    ua.userentersdetailandclickcloseicon();
 	}
 

@@ -89,7 +89,6 @@ public class User_DeleteMultiplePage {
 
 	public String successAlert() {
 		String text = eleSuccess.getText().replaceAll("\\n", " ").trim();
-		System.out.println(text);
 		return text;
 	}
 
@@ -102,7 +101,6 @@ public class User_DeleteMultiplePage {
 	public void verifyUserIsNotDel() {
 		try {
 			userID.equals(eleUSerID);
-			System.out.println();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -112,12 +110,9 @@ public class User_DeleteMultiplePage {
 		List<String> tableDataList = new ArrayList<String>();
 		for (WebElement ele : eleMulCheckBox) {
 			String getText = eleTableData.getText();
-			System.out.println(getText);
 			tableDataList.add(getText);
 			ele.click();
 		}
-		//System.out.println(tableDataList);
-
 	}
 
 }
