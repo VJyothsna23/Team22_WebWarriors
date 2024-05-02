@@ -19,7 +19,7 @@ Feature: Testing the Login Page of LMS application
 
   @LP4
   Scenario: Verify LMS title
-    Then Admin should see "LMS -Learning management system  as title"
+    Then Admin should see LMS -Learning Management System  as title
 
   @LP5
   Scenario: Verify  LMS title alignment
@@ -37,6 +37,7 @@ Feature: Testing the Login Page of LMS application
   Scenario: Validate alignment for navigation bar
     Then Admin should see the navigation bar text on the top right side
 
+  #
   @LP9
   Scenario: Validate navigation bar order  1st Program
     Then Admin should see program in the 1st place

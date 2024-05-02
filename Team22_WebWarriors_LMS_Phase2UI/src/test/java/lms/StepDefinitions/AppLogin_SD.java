@@ -43,8 +43,8 @@ public void http_response_then_the_link_is_broken(Integer int1) {
 }
 
 @Then("Admin should see correct spellings in all fields")
-public void admin_should_see_correct_spellings_in_all_fields() {
-   // lp.spellCheck();
+public void admin_should_see_correct_spellings_in_all_fields() throws Exception {
+    lp.spellCheck();
 }
 
 @Then("Admin should see logo on the left  side")

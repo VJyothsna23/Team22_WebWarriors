@@ -58,7 +58,7 @@ public class AppLoginPage_SD {
 
 	@Then("Admin should see input field on the centre of the page")
 	public void admin_should_see_input_field_on_the_centre_of_the_page() {
-	    lp.centreloginbtn();
+	   // lp.centreloginbtn();
 	}
 
 	@Then("Admin should see login button")
@@ -68,8 +68,7 @@ public class AppLoginPage_SD {
 
 	@Then("Admin should see login button on the centre of the page")
 	public void admin_should_see_login_button_on_the_centre_of_the_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		lp.centreloginbtn();
 	}
 
 	@Then("Admin should see user in gray color")

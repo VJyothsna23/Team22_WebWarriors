@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lms.DriverFactory.TestContext;
 import lms.PageFactory.DashBoardPage;
+import lms.PageFactory.LogoutPage;
 
 public class Dashboard_SD {
 	
@@ -49,10 +50,9 @@ public class Dashboard_SD {
 	    dbp.broken_links();
 	}
 
-	@Then("Admin should see LMS -Learning management system  as title")
+	@Then("Admin should see LMS -Learning Management System  as title")
 	public void admin_should_see_lms_learning_management_system_as_title() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    dbp.title("LMS - Learning Management System");
 	}
 
 	@Then("LMS title should be on the top left corner of page")
@@ -62,15 +62,13 @@ public class Dashboard_SD {
 	}
 
 	@Then("Admin should see correct spelling in navigation bar text")
-	public void admin_should_see_correct_spelling_in_navigation_bar_text() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_should_see_correct_spelling_in_navigation_bar_text() throws Exception {
+	    dbp.spellCheckNavBar();
 	}
 
 	@Then("Admin should see correct spelling and space in LMS title")
-	public void admin_should_see_correct_spelling_and_space_in_lms_title() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_should_see_correct_spelling_and_space_in_lms_title() throws Exception {
+	    dbp.spellCheckTitle();
 	}
 
 	@Then("Admin should see the navigation bar text on the top right side")
@@ -81,22 +79,23 @@ public class Dashboard_SD {
 
 	@Then("Admin should see program in the 1st place")
 	public void admin_should_see_program_in_the_1st_place() {
-	    //dbp.validateProgramModule();
+		dbp.listOfModules();
+	   dbp.validateProgramModule();
 	}
 
 	@Then("Admin should see batch in the 2nd place")
 	public void admin_should_see_batch_in_the_2nd_place() {
-	   // dbp.validateBatchModule();
+	   dbp.validateBatchModule();
 	}
 
 	@Then("Admin should see user in the  3rd place")
 	public void admin_should_see_user_in_the_3rd_place() {
-	   // dbp.validateUserModule();
+	    dbp.validateUserModule();
 	}
 
 	@Then("Admin should see logout in the 4th place")
 	public void admin_should_see_logout_in_the_4th_place() {
-	    //dbp.validatelogout();
+	    dbp.validatelogout();
 	}
 
 

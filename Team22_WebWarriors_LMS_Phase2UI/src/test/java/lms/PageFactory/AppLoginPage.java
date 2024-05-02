@@ -1,5 +1,6 @@
 package lms.PageFactory;
 
+import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -120,30 +121,42 @@ public class AppLoginPage  {
 		int eleHeight = logo.getSize().getHeight();
 		int eleWidth = logo.getSize().getWidth();
 		
-		Assert.assertEquals((((xPos + eleWidth) <= winWidth/2) && (yPos + eleHeight) <= winHeight/2), "Logo is NOT in the upper left quadrant");
+		System.out.println("winHeight" + winHeight);
+		System.out.println("winWidth" + winWidth);
+		System.out.println("xPos" + xPos);
+		System.out.println("yPos" + yPos);
+		System.out.println("eleHeight" + eleHeight);
+		System.out.println("eleWidth" + eleWidth);
+		System.out.println("(((xPos + eleWidth) <= winWidth/2) && (yPos + eleHeight) <= winHeight/2)" + (((xPos + eleWidth) <= winWidth/2) && (yPos + eleHeight) <= winHeight/2));
+		
+		Assert.assertTrue((((xPos + eleWidth) <= winWidth/2) && (yPos + eleHeight) <= winHeight/2), "Logo is in the upper left quadrant");
 
 	}
 	
-//	public String spellCheck() { // Extract text content from the web page
-//		 String PageTexts = driver.findElement(By.tagName("body")).getText(); // Create a SpellChecker instance SpellDictionary dictionary = null;
-//		 try { dictionary = new SpellDictionaryHashMap(); } 
-//		 catch (IOException e) 
-//		 {
+	public String spellCheck() throws Exception { // Extract text content from the web page
+		 String PageTexts = driver.findElement(By.tagName("body")).getText(); // Create a SpellChecker instance SpellDictionary dictionary = null;
+		 SpellDictionaryHashMap dictionary= new SpellDictionaryHashMap();
+//		 try {  dictionary = new SpellDictionaryHashMap(); } 
+//	 catch (IOException e) 
+//	 {
 //		 // TODO Auto-generated catch block e.printStackTrace(); 
 //		 } 
-//		 SpellChecker spellChecker = new SpellChecker(dictionary); // Tokenize the web page text into words 
-//		 String[] words = StringUtils.split(PageTexts);
-//		 StringBuffer misSpelledWords = null; // Check the spelling of each word
-//		 for (String word : words) {
-//		 if (!spellChecker.isCorrect(word)) 
-//		 { if (misSpelledWords == null) 
-//		 { misSpelledWords = new StringBuffer();
-//		 }
-//		 misSpelledWords.append(word); 
-//		 misSpelledWords.append(","); // System.out.println("Misspelled word: " + word); }
-//		 }
-//		 if (misSpelledWords != null) { return misSpelledWords.toString(); } return null;
-//		 }
+		 SpellChecker spellChecker = new SpellChecker(dictionary); // Tokenize the web page text into words 
+		 String[] words = StringUtils.split(PageTexts);
+		 StringBuffer misSpelledWords = null; // Check the spelling of each word
+		 for (String word : words) {
+		 if (!spellChecker.isCorrect(word)) 
+		 { if (misSpelledWords == null) 
+		 { misSpelledWords = new StringBuffer();
+		 }
+		 misSpelledWords.append(word); 
+		 misSpelledWords.append(","); // System.out.println("Misspelled word: " + word); }
+		 }
+		 if (misSpelledWords != null) { return misSpelledWords.toString(); }
+		 return null;
+		 }
+		return null;
+	}
 	public void verifyApllicationTitle() throws TesseractException {
 		String Title = " LMS - Learning Management System";
 		File imageFile=new File ("C:\\Users\\priya\\git\\Team22_WebWarriors\\Team22_WebWarriors_LMS_Phase2UI\\src\\test\\resources\\images\\Login_Screenshot.png");
@@ -164,7 +177,7 @@ public class AppLoginPage  {
 	}
 
 	public void verifyCompanyName() throws TesseractException {
-		String CompanyName = "NumpyNinja";
+		String CompanyName = " NumpyNinja";
 		File imageFile=new File ("C:\\Users\\priya\\git\\Team22_WebWarriors\\Team22_WebWarriors_LMS_Phase2UI\\src\\test\\resources\\images\\Login_Screenshot.png");
 		ITesseract image = new Tesseract();
 		String imageText = image.doOCR(imageFile);
@@ -229,11 +242,23 @@ public class AppLoginPage  {
      }
 	 
 	 public void centreloginbtn() {
-         Dimension dimuser = loginbtn.getSize();
+		 int winHeight = driver.manage().window().getSize().getHeight();     //dimension of browser window
+		 int winWidth = driver.manage().window().getSize().getWidth();       //dimension of browser window
+		 int xPos = loginbtn.getLocation().getX();
+			int yPos = loginbtn.getLocation().getY();
+		 
+		 Dimension dimuser = loginbtn.getSize();
+         
         int heightuser= dimuser.height;
         int widthuser=dimuser.width;
+        System.out.println("Winheight"+winHeight);
+        System.out.println("winWidth"+winWidth);
+        System.out.println("heightuser"+heightuser);
+        System.out.println("widthuser"+widthuser);
+        System.out.println("xPos"+xPos);
+        System.out.println("yPos"+yPos);
         
-        if (heightuser>30 & heightuser<60 & widthuser>400 & widthuser<600  ) {
+        if (xPos>700 & xPos<800 & yPos>400 & yPos<600  ) {
        	LoggerLoad.info("Login button in the centre");
         }  
      }
