@@ -35,11 +35,7 @@ public class TestContext {
 	Batch_DeletePage bd;
 	
 	
-	User_AddPage ua;
-	User_EditPage ue;
-	User_DeletePage ud;
-	User_AssignStudentPage uas;
-	User_AssignStaffPage uastf;
+	
 	
 	public void setDriver(WebDriver driver) {
 		String browser = ConfigReader.readPropertiesFile("browser");
@@ -137,25 +133,9 @@ public class TestContext {
 
 	
 
-	public User_AddPage getUa() {
-		return ua;
-	}
+	
 
-	public User_EditPage getUe() {
-		return ue;
-	}
-
-	public User_DeletePage getUd() {
-		return ud;
-	}
-
-	public User_AssignStudentPage getUas() {
-		return uas;
-	}
-
-	public User_AssignStaffPage getUastf() {
-		return uastf;
-	}
+	
 
 
 	public void initializePageObjects(WebDriver driver) {
@@ -177,11 +157,6 @@ public class TestContext {
 		this.bd = new Batch_DeletePage(driver);
 		
 		
-		this.ua = new User_AddPage(driver);
-		this.ue = new User_EditPage(driver);
-		this.ud = new User_DeletePage(driver);
-		this.uas = new User_AssignStudentPage(driver);
-		this.uastf = new User_AssignStaffPage(driver);
 		
 		
 	}
