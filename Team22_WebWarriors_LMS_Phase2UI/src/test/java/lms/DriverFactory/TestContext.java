@@ -34,8 +34,7 @@ public class TestContext {
 	Batch_EditPage be;
 	Batch_DeletePage bd;
 	
-	User_ManagePage um;
-	User_SortPage us;
+	
 	User_AddPage ua;
 	User_EditPage ue;
 	User_DeletePage ud;
@@ -136,13 +135,7 @@ public class TestContext {
 		return bd;
 	}
 
-	public User_ManagePage getUm() {
-		return um;
-	}
-
-	public User_SortPage getUp() {
-		return us;
-	}
+	
 
 	public User_AddPage getUa() {
 		return ua;
@@ -183,8 +176,7 @@ public class TestContext {
 		this.be = new Batch_EditPage(driver);
 		this.bd = new Batch_DeletePage(driver);
 		
-		this.um = new User_ManagePage(driver);
-		this.us = new User_SortPage(driver);
+		
 		this.ua = new User_AddPage(driver);
 		this.ue = new User_EditPage(driver);
 		this.ud = new User_DeletePage(driver);
