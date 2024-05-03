@@ -1,4 +1,4 @@
-@LMS1 @ProgramModule_Pagination
+@LMS @ProgramModule_Pagination
 Feature: Pagination
 
   Background: Admin is on Manage Program Page after logged in

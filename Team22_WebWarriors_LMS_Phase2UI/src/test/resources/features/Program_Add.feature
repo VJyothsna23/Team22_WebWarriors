@@ -1,4 +1,4 @@
-@LMS1 @ProgramModuleADD
+@LMS @ProgramModuleADD
 Feature: Add New Program
 
   Background: Logged on the LMS portal as Admin
